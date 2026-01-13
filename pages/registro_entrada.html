@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Registro de Entrada</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<h2>Registro de Entrada</h2>
+<form action="../backend/registrar_entrada.php" method="POST">
+<input type="text" name="nombre" placeholder="Nombre del paciente" required>
+<input type="number" name="edad" placeholder="Edad" required>
+<textarea name="direccion" placeholder="Dirección" required></textarea>
+<input type="text" name="telefono" placeholder="Teléfono" required>
+
+
+<h3>Datos del familiar</h3>
+<input type="text" name="familiar" placeholder="Nombre del familiar" required>
+<input type="text" name="telefono_familiar" placeholder="Teléfono del familiar" required>
+
+
+<h3>Pertenencias</h3>
+<textarea name="pertenencias" placeholder="Lista de pertenencias"></textarea>
+
+
+<textarea name="condicion" placeholder="Condición de ingreso" required></textarea>
+
+
+<button type="submit">Registrar</button>
+</form>
+</body>
+</html>
