@@ -1,32 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Registro de Entrada</title>
-<link rel="stylesheet" href="../style.css">
-</head>
-<body>
-<h2>Registro de Entrada</h2>
-<form action="../backend/registrar_entrada.php" method="POST">
-<input type="text" name="nombre" placeholder="Nombre del paciente" required>
-<input type="number" name="edad" placeholder="Edad" required>
-<textarea name="direccion" placeholder="Dirección" required></textarea>
-<input type="text" name="telefono" placeholder="Teléfono" required>
 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro de Entrada</title>
+        <link rel="icon" type="image/x-icon" href="../assets/AbreCamino.ico">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
 
-<h3>Datos del familiar</h3>
-<input type="text" name="familiar" placeholder="Nombre del familiar" required>
-<input type="text" name="telefono_familiar" placeholder="Teléfono del familiar" required>
+    <body>
+        <nav class="navbar fixed-top navbar-expand bg-body-tertiary">
+            <div class="container-fluid">
+                <img src="./assets/AbreCamino.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/index.html">Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Registrar Entrada</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/registro_salida.html">Registrar Salida</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/pagos.html">Pagos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/reportes.html">Reportes</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container text-center" style="margin-top: 80px;">
+            <div class="row">
+                <div class="card col-md-12 align-self-center shadow-lg bg-body rounded">
+                    <div class="card-header bg-white border-0 pb-0 pt-3">
+                        <h2>Registro de Entrada</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="../backend/registrar_entrada.php" method="POST">
+                            <h3>Datos del usuario</h3>
+                            <div class="row">
+                                <div class="col">
+                                    <input class="mb-2 form-control" type="text" name="nombre" placeholder="Nombre" required>
+                                    <input class="mb-2 form-control" type="text" name="curp" placeholder="CURP" required>
+                                </div>
+                                <div class="col">
+                                    <input class="mb-2 form-control" type="number" name="edad" placeholder="Edad" required>
+                                    <input class="mb-2 form-control" type="text" name="nss" placeholder="NSS" required>
+                                </div>
+                            </div>
+                            <h3>Datos del familiar</h3>
+                            <div class="row">
+                                <div class="col">
+                                    <input class="mb-2 form-control" type="text" name="familiar" placeholder="Nombre del familiar" required>
+                                    <input class="mb-2 form-control" type="text" name="telefono_familiar" placeholder="Teléfono del familiar" required>
+                                    <textarea class="form-control" name="direccion" id="dir" placeholder="Dirección" required></textarea>
+                                </div>
+                            </div>
+                            <h3>Pertenencias</h3>
+                            <div class="row">
+                                <div class="col">
+                                    <textarea class="mb-2 form-control" name="pertenencias"
+                                        placeholder="Lista de pertenencias"></textarea>
+                                    <textarea class="mb-2 form-control" name="condicion" placeholder="Condición de ingreso"
+                                        required></textarea>
 
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2 col-6 mx-auto mt-4 mb-3">
+                                <button type="submit" class="btn btn-outline-primary">Registrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+            </script>
+    </body>
 
-<h3>Pertenencias</h3>
-<textarea name="pertenencias" placeholder="Lista de pertenencias"></textarea>
-
-
-<textarea name="condicion" placeholder="Condición de ingreso" required></textarea>
-
-
-<button type="submit">Registrar</button>
-</form>
-</body>
 </html>

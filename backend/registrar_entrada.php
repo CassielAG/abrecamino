@@ -3,15 +3,16 @@ include 'db_connection.php';
 
 $nombre = $_POST['nombre'];
 $edad = $_POST['edad'];
+$curp = $_POST['curp'];
+$nss = $_POST['nss'];
 $direccion = $_POST['direccion'];
-$telefono = $_POST['telefono'];
 $familiar = $_POST['familiar'];
 $telefono_familiar = $_POST['telefono_familiar'];
 $pertenencias = $_POST['pertenencias'];
 $condicion = $_POST['condicion'];
 
-$conn->query("INSERT INTO pacientes(nombre, edad, direccion, telefono, familiar_responsable, telefono_familiar, fecha_ingreso, condicion_ingreso)
-VALUES ('$nombre', $edad, '$direccion', '$telefono', '$familiar', '$telefono_familiar', NOW(), '$condicion')");
+$conn->query("INSERT INTO pacientes(nombre, edad, curp, nss, direccion, familiar, telefono_familiar, fecha_ingreso, condicion)
+VALUES ('$nombre', $edad, '$curp', '$nss', '$direccion', '$familiar', '$telefono_familiar', NOW(), '$condicion')");
 
 $paciente_id = $conn->insert_id;
 
