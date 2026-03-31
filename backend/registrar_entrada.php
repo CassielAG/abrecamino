@@ -14,6 +14,8 @@ $condicion = $_POST['condicion'];
 $conn->query(query: "INSERT INTO usuarios(nombre, edad, curp, nss, direccion, familiar, telefono_familiar, fecha_ingreso, condicion)
 VALUES ('$nombre', $edad, '$curp', '$nss', '$direccion', '$familiar', '$telefono_familiar', NOW(), '$condicion')");
 
+$conn->query(query:"INSERT INTO fam_responsable(usuario_id, nombre, direccion, telefono) VALUES ($conn->insert_id, '$familiar', '$direccion', '$telefono_familiar')");
+
 $usuario_id = $conn->insert_id;
 
 if (!empty($pertenencias)) {
