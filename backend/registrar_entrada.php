@@ -11,14 +11,13 @@ $telefono_familiar = $_POST['telefono_familiar'];
 $pertenencias = $_POST['pertenencias'];
 $condicion = $_POST['condicion'];
 
-$conn->query("INSERT INTO usuarios(nombre, edad, curp, nss, direccion, familiar, telefono_familiar, fecha_ingreso, condicion)
+$conn->query(query: "INSERT INTO usuarios(nombre, edad, curp, nss, direccion, familiar, telefono_familiar, fecha_ingreso, condicion)
 VALUES ('$nombre', $edad, '$curp', '$nss', '$direccion', '$familiar', '$telefono_familiar', NOW(), '$condicion')");
 
-$paciente_id = $conn->insert_id;
+$usuario_id = $conn->insert_id;
 
 if (!empty($pertenencias)) {
-    $conn->query("INSERT INTO pertenencias(paciente_id, descripcion) VALUES ($paciente_id, '$pertenencias')");
+    $conn->query(query: "INSERT INTO pertenencias(usuario_id, descripcion) VALUES ($usuario_id, '$pertenencias')");
 }
 
 echo "Registro guardado";
-?>
