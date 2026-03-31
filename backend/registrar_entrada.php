@@ -11,7 +11,7 @@ $telefono_familiar = $_POST['telefono_familiar'];
 $pertenencias = $_POST['pertenencias'];
 $condicion = $_POST['condicion'];
 
-$conn->query("INSERT INTO pacientes(nombre, edad, curp, nss, direccion, familiar, telefono_familiar, fecha_ingreso, condicion)
+$conn->query("INSERT INTO usuarios(nombre, edad, curp, nss, direccion, familiar, telefono_familiar, fecha_ingreso, condicion)
 VALUES ('$nombre', $edad, '$curp', '$nss', '$direccion', '$familiar', '$telefono_familiar', NOW(), '$condicion')");
 
 $paciente_id = $conn->insert_id;
