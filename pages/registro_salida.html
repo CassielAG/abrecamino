@@ -1,5 +1,53 @@
-<form action="../backend/registrar_salida.php" method="POST">
-    <input type="number" name="paciente_id" placeholder="ID del paciente" required>
-    <textarea name="condicion" placeholder="Condición de salida" required></textarea>
-    <button>Registrar salida</button>
-</form>
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro de Salida</title>
+        <link rel="icon" type="image/x-icon" href="../assets/AbreCamino.ico">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <nav class="navbar fixed-top navbar-expand bg-body-tertiary">
+            <div class="container-fluid">
+                <img src="../assets/AbreCamino.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro_entrada.html">Registrar Entrada</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Registrar Salida</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pagos.html">Pagos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reportes.html">Reportes</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container text-center" style="margin-top: 80px;">
+            <div class="row">
+                <div class="card col-md-12 align-self-center shadow-lg bg-body rounded">
+                    <div class="card-header bg-white border-0 pb-0 pt-3">
+                        <h2>Registro de Salida</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="../backend/registrar_salida.php" method="POST">
+                            <input class="mb-2 form-control" type="number" name="usuario_id" placeholder="Num de expediente" required>
+                            <textarea class="mb-2 form-control" name="condicion" placeholder="Condición de salida" required></textarea>
+                            <button class="btn btn-outline-primary">Registrar salida</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

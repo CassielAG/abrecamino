@@ -5,6 +5,6 @@ error_reporting(E_ALL);
 include 'db_connection.php';
 $paciente = $_POST['paciente_id'];
 $condicion = $_POST['condicion'];
-$conn->query("INSERT INTO salidas(paciente_id, fecha_salida, condicion_salida) VALUES ($paciente, NOW(), '$condicion')");
+$conn->query(query: "INSERT INTO salidas(paciente_id, fecha_salida, condicion_salida) VALUES ($paciente, NOW(), '$condicion')");
 echo "Salida registrada";
 ?>

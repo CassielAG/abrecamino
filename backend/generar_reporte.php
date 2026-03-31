@@ -4,7 +4,7 @@ $result = $conn->query("SELECT * FROM pacientes");
 while ($row = $result->fetch_assoc()) {
     echo "Paciente: " . $row['nombre'] . "<br>";
     echo "Ingreso: " . $row['fecha_ingreso'] . "<br><br>";
-    //echo "Salida: " . $row['fecha_salida'] . "<br><br>";
+    echo "Salida: " . $row['fecha_salida'] . "<br><br>";
 }
 if ($result->num_rows > 0) {
     echo "<table class=\"table table-striped table-hover\">
