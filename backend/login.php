@@ -5,9 +5,9 @@ error_reporting(E_ALL);
 include 'db_connection.php';
 $usuario = $_POST['usuario'];
 $password = md5($_POST['password']);
-$q = $conn->query("SELECT * FROM usuarios WHERE usuario='$usuario' AND password='$password'");
+$q = $conn->query("SELECT * FROM admins WHERE usuario='$usuario' AND password='$password'");
 if ($q->num_rows > 0) {
-    header("Location: ../index.html");
+    header("Location: ./lista.php");
     exit();
 } else {
     echo "Credenciales incorrectas";

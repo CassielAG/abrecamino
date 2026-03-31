@@ -22,16 +22,13 @@ echo '<!DOCTYPE html>
                         <a class="nav-link active" aria-current="page" href="#">Usuarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/registro_entrada.html">Registrar Entrada</a>
+                        <a class="nav-link" href="../pages/registro_entrada.html">Registrar Entrada</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/registro_salida.html">Registrar Salida</a>
+                        <a class="nav-link" href="../pages/registro_salida.html">Registrar Salida</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/pagos.html">Pagos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/reportes.html">Reportes</a>
+                        <a class="nav-link" href="../pages/pagos.html">Pagos</a>
                     </li>
                 </ul>
             </div>
