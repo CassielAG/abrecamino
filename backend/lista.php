@@ -28,7 +28,7 @@ echo '<!DOCTYPE html>
                         <a class="nav-link" href="../pages/registro_salida.html">Registrar Salida</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../pages/pagos.html">Pagos</a>
+                        <a class="nav-link" href="./lista_pagos.php">Pagos</a>
                     </li>
                 </ul>
             </div>
@@ -79,4 +79,3 @@ echo '</div>
 
 </html>';
 $conn->close();
-?>
